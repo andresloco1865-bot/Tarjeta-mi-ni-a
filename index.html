@@ -87,7 +87,8 @@
   </div>
 </div>
 
-<audio id="loveSong" src="Sol - Willian (Letra)(M4A_128K).m4a"></audio>
+<!-- Audio (asegúrate de subir el archivo como sol-willian.mp3 al repo) -->
+<audio id="loveSong" src="sol-willian.mp3"></audio>
 
 <script>
   const btn1 = document.getElementById('btn1');
@@ -109,7 +110,7 @@
   btn3.onclick = () => {
     btn3.style.display = 'none';
     finalMessage.style.display = 'flex';
-    loveSong.play();
+    loveSong.play().catch(err => console.log('Error al reproducir:', err));
   };
 </script>
 
