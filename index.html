@@ -87,8 +87,8 @@
   </div>
 </div>
 
-<!-- Audio (asegúrate de subir el archivo como sol-willian.mp3 al repo) -->
-<audio id="loveSong" src="sol-willian.mp3"></audio>
+<!-- Audio con enlace directo a GitHub -->
+<audio id="loveSong" src="https://raw.githubusercontent.com/andresloco1865-bot/Tarjeta-mi-ni-a/main/sol-willian.mp3"></audio>
 
 <script>
   const btn1 = document.getElementById('btn1');
@@ -108,6 +108,14 @@
   };
 
   btn3.onclick = () => {
+    btn3.style.display = 'none';
+    finalMessage.style.display = 'flex';
+    loveSong.play().catch(err => console.log('Error al reproducir:', err));
+  };
+</script>
+
+</body>
+</html>  btn3.onclick = () => {
     btn3.style.display = 'none';
     finalMessage.style.display = 'flex';
     loveSong.play().catch(err => console.log('Error al reproducir:', err));
