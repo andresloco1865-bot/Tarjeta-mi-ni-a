@@ -58,21 +58,10 @@
     position: relative;
     animation: floatUp 5s linear infinite;
   }
-
-  /* Animación de palabras moviéndose */
   @keyframes floatUp {
-    0% {
-      opacity: 0;
-      transform: translateY(30px) rotate(0deg);
-    }
-    50% {
-      opacity: 1;
-      transform: translateY(-20px) rotate(10deg);
-    }
-    100% {
-      opacity: 0;
-      transform: translateY(-60px) rotate(-10deg);
-    }
+    0% { opacity: 0; transform: translateY(30px) rotate(0deg); }
+    50% { opacity: 1; transform: translateY(-20px) rotate(10deg); }
+    100% { opacity: 0; transform: translateY(-60px) rotate(-10deg); }
   }
 </style>
 </head>
@@ -98,11 +87,14 @@
   </div>
 </div>
 
+<audio id="loveSong" src="Sol - Willian (Letra)(M4A_128K).m4a"></audio>
+
 <script>
   const btn1 = document.getElementById('btn1');
   const btn2 = document.getElementById('btn2');
   const btn3 = document.getElementById('btn3');
   const finalMessage = document.getElementById('finalMessage');
+  const loveSong = document.getElementById('loveSong');
 
   btn1.onclick = () => {
     btn1.style.display = 'none';
@@ -117,6 +109,7 @@
   btn3.onclick = () => {
     btn3.style.display = 'none';
     finalMessage.style.display = 'flex';
+    loveSong.play();
   };
 </script>
 
