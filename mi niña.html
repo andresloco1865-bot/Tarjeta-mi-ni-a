@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Para mi niña ❤️</title>
+<style>
+  body {
+    margin: 0; padding: 0;
+    background: linear-gradient(135deg, #ff3b3f, #ff7eb3);
+    font-family: Arial, sans-serif;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+  }
+  button {
+    background: white;
+    color: #ff3b3f;
+    border: none;
+    border-radius: 50px;
+    font-size: 2.5rem;
+    padding: 20px 50px;
+    margin: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+    user-select: none;
+  }
+  button:hover {
+    background: #ffd1d8;
+  }
+  #finalMessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 2.8rem;
+    font-weight: bold;
+    position: relative;
+  }
+  #loveWords {
+    margin-left: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 300px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+  }
+  .word {
+    color: #fff0f5;
+    font-size: 1.2rem;
+    margin: 5px;
+    position: relative;
+    animation: floatUp 5s linear infinite;
+  }
+
+  /* Animación de palabras moviéndose */
+  @keyframes floatUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px) rotate(0deg);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-20px) rotate(10deg);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-60px) rotate(-10deg);
+    }
+  }
+</style>
+</head>
+<body>
+
+<button id="btn1">Toca para ver</button>
+<button id="btn2" style="display:none;">Te amo</button>
+<button id="btn3" style="display:none;">Eres hermosa</button>
+
+<div id="finalMessage" style="display:none;">
+  <div>Mi niña, te amo con todo mi corazón 💖</div>
+  <div id="loveWords">
+    <span class="word" style="animation-delay: 0s;">bella</span>
+    <span class="word" style="animation-delay: 0.5s;">linda</span>
+    <span class="word" style="animation-delay: 1s;">maravillosa</span>
+    <span class="word" style="animation-delay: 1.5s;">única</span>
+    <span class="word" style="animation-delay: 2s;">increíble</span>
+    <span class="word" style="animation-delay: 2.5s;">dulce</span>
+    <span class="word" style="animation-delay: 3s;">especial</span>
+    <span class="word" style="animation-delay: 3.5s;">amada</span>
+    <span class="word" style="animation-delay: 4s;">mi vida</span>
+    <span class="word" style="animation-delay: 4.5s;">mi sol</span>
+  </div>
+</div>
+
+<script>
+  const btn1 = document.getElementById('btn1');
+  const btn2 = document.getElementById('btn2');
+  const btn3 = document.getElementById('btn3');
+  const finalMessage = document.getElementById('finalMessage');
+
+  btn1.onclick = () => {
+    btn1.style.display = 'none';
+    btn2.style.display = 'inline-block';
+  };
+
+  btn2.onclick = () => {
+    btn2.style.display = 'none';
+    btn3.style.display = 'inline-block';
+  };
+
+  btn3.onclick = () => {
+    btn3.style.display = 'none';
+    finalMessage.style.display = 'flex';
+  };
+</script>
+
+</body>
+</html>
